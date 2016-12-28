@@ -1,0 +1,29 @@
+@import '../../../variable.scss';
+
+.App .Done {
+  text-align: center;
+  padding: 100px 20px;
+
+  h3 {
+    text-align: center;
+    font: 600 18px/24px 'Noto Sans KR', sans-serif;
+    color: #ff6600;
+  }
+
+  p {
+    span {
+      font: 400 14px/24px 'Noto Sans KR', sans-serif;
+      color: rgba(0,0,0,.8);
+    }
+    text-align: center;
+    font: 400 14px/24px 'Noto Sans KR', sans-serif;
+    color: rgba(0,0,0, .8);
+    margin-bottom: 20px;
+  }
+
+  span {
+    font: 400 14px/24px 'Nanum Pen Script', sans-serif;
+    color: #666;
+  }
+
+}

@@ -1,0 +1,216 @@
+@import '../../../variable.scss';
+
+.App .Register {
+  position: relative;
+  margin: 20px;
+  display: block;
+  box-sizing: border-box;
+
+  .form {
+    @include card;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: $shadow8dp;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 500px;
+
+    .row {
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    }
+
+    fieldset {
+      position: relative;
+      border: 0;
+      margin: 0;
+      display: block;
+      font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+      padding: 5px 0;
+      color: #000;
+      float: left;
+    }
+
+    input {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      outline: 0;
+      font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      border: none;
+      border-color: #ffffff;
+      transition: border-bottom 0.3s $easeOutQuad;
+      will-change: border-bottom;
+      &:focus {
+        border-bottom: 1px solid #ff6600;
+      }
+    }
+
+    .input-wrapper {
+      position: absolute;
+      top: 5px;
+      left: 40px;
+      right: 0;
+      bottom: 5px;
+      font-size: 0;
+
+      input {
+        font-size: 18px;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 18px;
+        color: #000;
+        height: 24px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        position: relative;
+        background: #fff;
+
+        .check {
+          display: block;
+          width: 44px;
+          height: 44px;
+          position: absolute;
+          top: -10px;
+          left: -5px;
+
+          &.checked1 {
+            background: url(imgs/circle1.png) 0 0/cover no-repeat;
+            opacity: .8;
+          }
+          &.checked2 {
+            background: url(imgs/circle2.png) 0 0/cover no-repeat;
+            opacity: .8;
+          }
+          &.checked3 {
+            background: url(imgs/circle3.png) 0 0/cover no-repeat;
+            opacity: .8;
+          }
+        }
+      }
+    }
+
+
+    .name-field {
+      width: 45%;
+    }
+
+    .age-field {
+      width: 45%;
+    }
+
+    .gender-field {
+      margin-left: 5%;
+      width: 50%;
+      a {
+        width: 50%;
+      }
+    }
+
+    .address-field {
+      width: 100%;
+      .input-wrapper {
+        left: 60px;
+      }
+    }
+
+    .spacer {
+      font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+      padding: 20px 0;
+    }
+
+
+    .register-field {
+      width: 60%;
+      .input-wrapper {
+        left: 50px;
+      }
+      a {
+        width: 50%;
+      }
+    }
+
+    .needRide-field {
+      width: 70%;
+      .input-wrapper {
+        left: 50px;
+      }
+      a {
+        width: 50%;
+      }
+    }
+
+    .canRide-field {
+      width: 100%;
+      .input-wrapper {
+        left: 160px;
+      }
+      a {
+        width: 50%;
+      }
+    }
+  }
+
+
+  .controls {
+    margin: 40px auto;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+    &.invalid {
+      opacity: 0.5;
+    }
+  }
+  .nextBtn {
+    @include button;
+    display: inline-block;
+    font: 600 14px/36px 'Noto Sans KR', sans-serif;
+    height: 36px;
+    padding: 0 20px 0 36px;
+    border-radius: 2px;
+    background: #ff6600;
+    position: relative;
+
+    .material-icons {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      font-size: 18px;
+    }
+
+    .icon {
+      display: block;
+    }
+
+    .loading {
+      display: none;
+      animation-timing-function: linear;
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-duration: 1000ms;
+    }
+
+    color: rgba(255,255,255, .8);
+    &:hover {
+      color: rgba(255,255,255, .9);
+    }
+  }
+
+
+}
+
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

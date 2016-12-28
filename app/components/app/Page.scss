@@ -1,0 +1,16 @@
+.App .PageTransition {
+  position: relative;
+  width: 200%;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  .Page {
+    position: relative;
+    width: 50%;
+    float: left;
+    padding-bottom: 100px;
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'The Left';
+    src: url('fonts/theleft-webfont.eot');
+    src: url('fonts/theleft-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/theleft-webfont.woff2') format('woff2'),
+         url('fonts/theleft-webfont.woff') format('woff'),
+         url('fonts/theleft-webfont.ttf') format('truetype'),
+         url('fonts/theleft-webfont.svg#theleftregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
