@@ -1,0 +1,9 @@
+#! /bin/bash
+front="$( cd "$( dirname $0 )" && cd .. && pwd )"
+www="$( cd "$front" && cd .. && cd mybm && pwd )"
+
+cp -f "$www/static/app.js" "$www/static/app.js.bak"
+cp -f "$front/public/app.js" "$www/static/app.js"
+
+cp -f "$www/static/app.css" "$www/static/app.css.bak"
+cp -f "$front/public/app.css" "$www/static/app.css"
