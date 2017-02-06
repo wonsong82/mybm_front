@@ -1,3 +1,26 @@
+# install #
+
+```
+#!bash
+
+git pull
+
+copy env.sample.js into env.js
+env = development | production
+site = local site address ex http://mybm.io
+domain = mybm.io
+
+npm install
+npm start : development : 8080 auto hot reload scripts
+npm run build : production : compile js css file into public
+
+
+
+
+```
+
+
+
 # Webpack Boilerplate #
 
 This is a simple webpack boiler plate for es6(es2005), polyfill, react, sass, less, stylus, css.
@@ -62,9 +85,3 @@ each js and css can be accessible in public folder
 **"npm run build:dev"**  
 transpile css & js once, compress the sources, remove warmings, comments, console.logs, debug and doesn't include sourcemaps
 each js and css can be accessible in public folder
-  
- 
-
-
-
-
