@@ -72,8 +72,44 @@ const retreat16winter = ( state = initState.retreat16winter, action ) => {
 }
 
 
+// Retreat 16 Winter Apply
+const skitrip1702 = ( state = initState.skitrip1702, action ) => {
+  switch( action.type ){
 
-const appReducer = combineReducers({ soon16, retreat16winter })
+    case 'skitrip1702_setName':
+      return { ...state, name: action.name }
+
+    case 'skitrip1702_setCity':
+      return { ...state, city: action.city }
+
+    case 'skitrip1702_setWhichRide':
+      return { ...state, whichRide: action.ride }
+
+    case 'skitrip1702_setHaveEquipment':
+      return { ...state, haveEquipment: action.haveEquipment }
+
+    case 'skitrip1702_setNeedTicket':
+      return { ...state, needTicket: action.needTicket }
+
+    case 'skitrip1702_setJoinDinner':
+      return { ...state, joinDinner: action.joinDinner }
+
+    case 'skitrip1702_setNeedRide':
+      return { ...state, needRide: action.needRide }
+
+    case 'skitrip1702_setCanRide':
+      return { ...state, canRide: action.canRide }
+
+    case 'skitrip1702_setIsValid':
+      return { ...state, isValid: action.isValid }
+
+    default: return state
+
+  }
+}
+
+
+const appReducer = combineReducers({ soon16, retreat16winter, skitrip1702 })
 export default appReducer
 
 

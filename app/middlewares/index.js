@@ -94,3 +94,53 @@ export const retreat16winter_submit = () => (dispatch, getState) => {
     }
   })
 }
+
+
+
+
+
+import { skitrip1702_setIsValid } from '../actions/'
+export const skitrip1702_validate = () => (dispatch, getState) => {
+  const { name, city, whichRide, haveEquipment, needTicket, joinDinner, needRide, canRide } = getState().skitrip1702
+
+  if( name && city && whichRide && haveEquipment && needTicket && joinDinner && needRide ){
+    if( needRide === '0' ){
+      if( canRide ){
+        dispatch( skitrip1702_setIsValid(true) )
+      } else {
+        dispatch( skitrip1702_setIsValid(false) )
+      }
+    }
+    else {
+      dispatch( skitrip1702_setIsValid(true) )
+    }
+  }
+
+  else {
+    dispatch( skitrip1702_setIsValid(false) )
+  }
+}
+
+import { skitrip1702_submitSent, skitrip1702_submitReceived } from '../actions/'
+export const skitrip1702_submit = () => (dispatch, getState) => {
+  const { name, city, whichRide, haveEquipment, needTicket, joinDinner, needRide, canRide } = getState().skitrip1702
+  dispatch( skitrip1702_submitSent() )
+  $.ajax({
+    url: '/api/skitrip-1702/apply',
+    cache: false,
+    method: 'post',
+    data: {
+      name, city, whichRide, haveEquipment, needTicket, joinDinner, needRide, canRide
+    },
+    success: e => {
+      console.log(e);
+      if( e=='ok' ){
+        dispatch( skitrip1702_submitReceived() )
+        browserHistory.push('/skitrip-1702/done')
+      }
+      else {
+        console.log(e)
+      }
+    }
+  })
+}

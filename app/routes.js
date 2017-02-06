@@ -12,6 +12,9 @@ import Soon16_Done from './containers/app/pages/soon-16/Done'
 import Retreat16Winter_Apply from './containers/app/pages/retreat-16-winter/Apply'
 import Retreat16Winter_Done from './containers/app/pages/retreat-16-winter/Done'
 
+// 2016 스키트립
+import Skitrip1702_Apply from './containers/app/pages/skitrip-1702/Apply';
+import Skitrip1702_Done from './containers/app/pages/skitrip-1702/Done';
 
 export default (
   <Route path="/" component={App}>
@@ -30,6 +33,13 @@ export default (
            components={{ page: Retreat16Winter_Apply }} />
     <Route path="retreat-16-winter/done"
            components={{ page: Retreat16Winter_Done }} />
-    
+
+
+    <Route path="skitrip-1702/apply"
+           components={{ page: Skitrip1702_Apply }} />
+    <Route path="skitrip-1702/done"
+           components={{ page: Skitrip1702_Done }} />
+
+
   </Route>
 )

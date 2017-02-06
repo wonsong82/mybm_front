@@ -30,5 +30,20 @@ export const retreat16winter_submitSent = () => ({ type: 'retreat16winter_submit
 export const retreat16winter_submitReceived = data => ({ type: 'retreat16winter_submitReceived' })
 export const retreat16winter_submit = Middlewares.retreat16winter_submit
 
+// 2017-02 스키트립
+export const skitrip1702_setIsValid = isValid => ({ type: 'skitrip1702_setIsValid', isValid })
+export const skitrip1702_setName = name => ({ type: 'skitrip1702_setName', name })
+export const skitrip1702_setCity = city => ({ type: 'skitrip1702_setCity', city })
+export const skitrip1702_setWhichRide = ride => ({ type: 'skitrip1702_setWhichRide', ride })
+export const skitrip1702_setHaveEquipment = haveEquipment => ({ type: 'skitrip1702_setHaveEquipment', haveEquipment })
+export const skitrip1702_setNeedTicket = needTicket => ({ type: 'skitrip1702_setNeedTicket', needTicket })
+export const skitrip1702_setJoinDinner = joinDinner => ({ type: 'skitrip1702_setJoinDinner', joinDinner })
+export const skitrip1702_setNeedRide = needRide => ({ type: 'skitrip1702_setNeedRide', needRide })
+export const skitrip1702_setCanRide = canRide => ({ type: 'skitrip1702_setCanRide', canRide })
+export const skitrip1702_validate = Middlewares.skitrip1702_validate
+
+export const skitrip1702_submitSent = () => ({ type: 'skitrip1702_submitSent' })
+export const skitrip1702_submitReceived = data => ({ type: 'skitrip1702_submitReceived' })
+export const skitrip1702_submit = Middlewares.skitrip1702_submit
 
 

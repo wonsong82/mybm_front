@@ -1,0 +1,184 @@
+@import '../../../variable.scss';
+
+.App .Skitrip1702_Apply {
+  position: relative;
+  margin: 20px;
+  display: block;
+  box-sizing: border-box;
+
+  .form {
+    @include card;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: $shadow8dp;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 500px;
+
+    .row {
+      width: 100%;
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    }
+
+    fieldset {
+      position: relative;
+      border: 0;
+      margin: 0;
+      display: block;
+      font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+      padding: 5px 0;
+      color: #000;
+      float: left;
+      width: 100%;
+
+      label {
+        float: left;
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .input-wrapper, .select-wrapper {
+        font-size: 0;
+        display: inline-block;
+      }
+
+      .input-wrapper {
+        input {
+          display: inline-block;
+          width: 100%;
+          height: 24px;
+          outline: 0;
+          font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          border: none;
+          background: transparent;
+          border-color: #ffffff;
+          transition: border-bottom 0.3s $easeOutQuad;
+          will-change: border-bottom;
+          &:focus {
+            border-bottom: 1px solid #ff6600;
+          }
+        }
+      }
+
+      .select-wrapper {
+        min-width: 250px;
+        a {
+          display: inline-block;
+          font-size: 18px;
+          color: #000;
+          height: 24px;
+          padding-left: 10px;
+          box-sizing: border-box;
+          position: relative;
+          background: transparent;
+
+          .check {
+            display: block;
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+
+            &.checked1 {
+              background: url(imgs/circle1.png) 0 0/cover no-repeat;
+              opacity: .8;
+            }
+            &.checked2 {
+              background: url(imgs/circle2.png) 0 0/cover no-repeat;
+              opacity: .8;
+            }
+            &.checked3 {
+              background: url(imgs/circle3.png) 0 0/cover no-repeat;
+              opacity: .8;
+            }
+          }
+        }
+
+        a {
+          width: 50%;
+        }
+        &.sel-3 a {
+          width: 33%;
+        }
+        &.sel-4 a {
+          width: 25%;
+        }
+        &.sel-5 a {
+          width: 20%;
+        }
+      }
+
+    }
+
+
+
+
+    .spacer {
+      font: 400 18px/24px 'Nanum Pen Script', sans-serif;
+      padding: 20px 0;
+    }
+
+  }
+
+
+  .controls {
+    margin: 40px auto;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+    &.invalid {
+      opacity: 0.5;
+    }
+  }
+  .nextBtn {
+    @include button;
+    display: inline-block;
+    font: 600 14px/36px 'Noto Sans KR', sans-serif;
+    height: 36px;
+    padding: 0 20px 0 36px;
+    border-radius: 2px;
+    background: #ff6600;
+    position: relative;
+
+    .material-icons {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      font-size: 18px;
+    }
+
+    .icon {
+      display: block;
+    }
+
+    .loading {
+      display: none;
+      animation-timing-function: linear;
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-duration: 1000ms;
+    }
+
+    color: rgba(255,255,255, .8);
+    &:hover {
+      color: rgba(255,255,255, .9);
+    }
+  }
+
+
+}
+
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

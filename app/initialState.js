@@ -20,6 +20,18 @@ const initialState = {
     needRide: null,
     canRide: null,
     isValid: false
+  },
+
+  skitrip1702: {
+    name: null,
+    city: null,
+    whichRide: null,
+    haveEquipment: null,
+    needTicket: null,
+    joinDinner: null,
+    needRide: null,
+    canRide: null,
+    isValid: false
   }
 
 
